@@ -51,6 +51,7 @@ class WriteToDbPage extends StatelessWidget {
         onPressed: () {
           context.read<MindsViewModel>().addMind(MindModel(author: author.text, mind: mind.text));
           Navigator.push(context, MaterialPageRoute(builder: (context) => AllMindsPage(), ));
+          context.read<MindsViewModel>().readMinds();
 
 
         },
